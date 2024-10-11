@@ -1,0 +1,279 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+}
+
+
+/* Header */
+header {
+  background-color: #19660d;
+  color: white;
+  padding: 10px;
+  text-align: left;
+  width: 100%;
+  height: 125px;
+  box-sizing: border-box;
+}
+
+/* Container (Main Layout) */
+.container {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 10px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+
+/* Navigation Bar */
+nav {
+  background-color: #f4f4f4;
+  padding: 20px;
+  height: 100vh;
+  /* Full height of the viewport */
+  position: sticky;
+  /* Keeps the nav bar sticky when scrolling */
+  top: 0;
+  /* Start at the top of the viewport */
+  border-radius: 5px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 24px;
+  height: fit-content;
+}
+
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+
+nav ul li {
+  margin-bottom: 10px;
+}
+
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+  padding: 10px;
+  background-color: #ddd;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+
+nav ul li a:hover {
+  background-color: #ccc;
+}
+
+.active {
+  background-color: 333;
+  color: white;
+}
+
+/* Main Content Area */
+main {
+  display: grid;
+  box-sizing: border-box;
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  /* Responsive grid */
+  gap: 10px;
+  /* Space between grid items */
+  padding: 10px;
+  /* Padding around the grid */
+}
+
+
+/* Individual photo items */
+.photo-item {
+  background-color: #eee;
+  /* Background color for photo items */
+  border-radius: 5px;
+  overflow: hidden;
+  /* Ensures content doesn't overflow */
+}
+
+
+/* Ensure images fit nicely */
+.photo-item img {
+  width: 100%;
+  /* Make images responsive */
+  height: auto;
+  /* Maintain aspect ratio */
+  display: block;
+  /* Removes bottom whitespace */
+}
+
+/* Hiding sections that aren't visible */
+.hidden {
+  display: none;
+}
+
+
+/* Footer */
+footer {
+  background-color: #19660d;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+  bottom: 0;
+  box-sizing: border-box;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .photo-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  /* nav bar*/
+  nav {
+    height: auto;
+    text-align: center;
+    /* Centers the text in nav */
+  }
+
+
+  footer {
+    position: static;
+  }
+}
+
+/*logo positioning*/
+.logo {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  height: 90px;
+  width: 90px;
+  z-index: 10;
+}
+
+/*paragraph styling*/
+p {
+  text-indent: 10px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 18px;
+}
+
+/*container for paragraph*/
+.description {
+  background-color: lightgray;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+h1 {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 56px;
+  margin: 3vh;
+}
+
+h2 {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 44px;
+  margin-top: 5px;
+  padding-left: 15px;
+}
+
+#home p {
+  font-size: 20px;
+}
+
+@media (max-width: 1200px) {
+  h1 {
+    font-size: 48px;
+  }
+
+  h2 {
+    font-size: 36px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  #home p {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 992px) {
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  #home p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 28px
+  }
+
+  h2 {
+    font-size: 20px
+  }
+
+  p {
+    font-size: 12px;
+  }
+
+  header {
+    height: auto;
+  }
+
+  #home p {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 576px) {
+  h1 {
+    font-size: 24px;
+    /* Size for phone screens */
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  p {
+    font-size: 10px;
+  }
+
+  #home p {
+    font-size: 10px;
+  }
+}
