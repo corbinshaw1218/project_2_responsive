@@ -29,3 +29,15 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 });
+const themeToggleButton = document.getElementById('theme-toggle');
+const themeStylesheet = document.getElementById('theme-stylesheet');
+
+themeToggleButton.addEventListener('click', () => {
+  if (themeStylesheet.getAttribute('href') === 'light.css') {
+    themeStylesheet.setAttribute('href', 'dark.css');
+    themeToggleButton.textContent = 'Switch to Light Mode';
+  } else {
+    themeStylesheet.setAttribute('href', 'light.css');
+    themeToggleButton.textContent = 'Switch to Dark Mode';
+  }
+});
